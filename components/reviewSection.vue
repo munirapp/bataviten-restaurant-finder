@@ -1,13 +1,11 @@
 <template>
-  <div id="index"></div>
+  <div id="reviewSection"></div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'Index',
+  name: 'ReviewSection',
 })
 </script>
-
-

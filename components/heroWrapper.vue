@@ -1,13 +1,11 @@
 <template>
-  <div id="index"></div>
+  <div id="heroWrapper"></div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'Index',
+  name: 'HeroWrapper',
 })
 </script>
-
-
