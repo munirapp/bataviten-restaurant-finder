@@ -3,9 +3,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
-
-export default Vue.extend({
-  name: 'footerBar',
-})
+export default {
+  name:"FooterBar"
+}
 </script>

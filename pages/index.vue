@@ -2,12 +2,10 @@
   <div id="index"></div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  name: 'Index',
-})
+<script>
+export default {
+  name: 'Index'
+}
 </script>
 
 
