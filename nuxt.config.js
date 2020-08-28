@@ -67,4 +67,8 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  env: {
+    zomatoKey: process.env.ZOMATO_API_KEY,
+    zomatoUrl: process.env.ZOMATO_API_URL,
+  },
 }

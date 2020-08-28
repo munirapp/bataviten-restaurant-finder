@@ -1,5 +1,14 @@
 import dataReviewRestaurant from '../__mock__/dataReviewRestaurant'
-import apiFactory from "../../plugins/api-factory"
+import apiFactory from '../../plugins/api-factory'
+import dotenv from 'dotenv'
+
+beforeAll(() => {
+  dotenv.config()
+  apiFactory.setCustomUrlApi(
+    process.env.ZOMATO_API_URL,
+    process.env.ZOMATO_API_KEY
+  )
+})
 
 describe('Test api get collections', () => {
   it('it should return response same with mock json', async () => {

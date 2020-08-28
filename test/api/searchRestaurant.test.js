@@ -1,5 +1,14 @@
 import dataMockRestaurant from '../__mock__/dataSearchRestaurant'
-import apiFactory from "../../plugins/api-factory"
+import apiFactory from '../../plugins/api-factory'
+import dotenv from 'dotenv'
+
+beforeAll(() => {
+  dotenv.config()
+  apiFactory.setCustomUrlApi(
+    process.env.ZOMATO_API_URL,
+    process.env.ZOMATO_API_KEY
+  )
+})
 
 describe('Test api get collections', () => {
   it('it should return response same with mock json', async () => {
@@ -9,7 +18,12 @@ describe('Test api get collections', () => {
     const q = 'kemang'
     const order = 'asc'
     // Run api request
-    const response = await apiFactory.searchRestaurant(entity_id, entity_type, q, order)
+    const response = await apiFactory.searchRestaurant(
+      entity_id,
+      entity_type,
+      q,
+      order
+    )
     // Expect response request has 200 code
     expect(response.status).toBe(200)
     // Expect response request has same data object keys with data mock

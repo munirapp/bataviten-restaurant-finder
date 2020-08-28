@@ -4,14 +4,6 @@
 
 <script>
 export default {
-  name:"About"
-}
-</script>>
-
-
-export default {
   name: 'About',
 }
 </script>
-
-
