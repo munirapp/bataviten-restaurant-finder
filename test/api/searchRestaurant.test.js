@@ -1,6 +1,6 @@
-import dataMockRestaurant from '../__mock__/dataSearchRestaurant'
-import apiFactory from '../../plugins/api-factory'
 import dotenv from 'dotenv'
+import apiFactory from '../../plugins/api-factory'
+import dataMockRestaurant from '../__mock__/dataSearchRestaurant'
 
 beforeAll(() => {
   dotenv.config()
@@ -13,14 +13,14 @@ beforeAll(() => {
 describe('Test api get collections', () => {
   it('it should return response same with mock json', async () => {
     // Initate variable params
-    const entity_id = 74
-    const entity_type = 'city'
+    const entityId = 74
+    const entityType = 'city'
     const q = 'kemang'
     const order = 'asc'
     // Run api request
     const response = await apiFactory.searchRestaurant(
-      entity_id,
-      entity_type,
+      entityId,
+      entityType,
       q,
       order
     )

@@ -1,6 +1,6 @@
-import dataMockDetailRestaurant from '../__mock__/dataDetailRestaurant'
-import apiFactory from '../../plugins/api-factory'
 import dotenv from 'dotenv'
+import apiFactory from '../../plugins/api-factory'
+import dataMockDetailRestaurant from '../__mock__/dataDetailRestaurant'
 
 beforeAll(() => {
   dotenv.config()
@@ -13,9 +13,9 @@ beforeAll(() => {
 describe('Test api get collections', () => {
   it('it should return response same with mock json', async () => {
     // Initate variable params
-    const res_id = 7405446
+    const resId = 7405446
     // Run api request
-    const response = await apiFactory.getDetailRestaurant(res_id)
+    const response = await apiFactory.getDetailRestaurant(resId)
     // Expect response request has 200 code
     expect(response.status).toBe(200)
     // Expect response request has same data object keys with data mock

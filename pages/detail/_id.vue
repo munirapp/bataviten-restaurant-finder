@@ -18,7 +18,10 @@ export default {
     },
   },
   created() {
-    //this.$store.dispatch('')
+    this.$store.dispatch('runGetDetailRestaurant', {
+      key: 'dataDetailRestaurant',
+      id: this.$route.params.id,
+    })
   },
 }
 </script>
