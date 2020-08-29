@@ -1,0 +1,22 @@
+name: Bataviten CI Actions
+on:
+  push:
+    branches: [master, development]
+  pull_request:
+    branches: [master]
+jobs:
+  container-job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [13.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm run install
+      - name: Running Lint check
+        run: npm run lint
+      - name: Running Unit Test
+        run: npm run test
+      - name: Build Project
+        run: npm run build
