@@ -14,6 +14,11 @@ const actions = {
     const { data } = await apiFactory.searchRestaurant(payload.data)
     commit('set', [payload.key, data])
   },
+
+  async runGetDetailRestaurant({ commit }, payload) {
+    const { data } = await apiFactory.getDetailRestaurant(payload.id)
+    commit('set', [payload.key, data])
+  },
 }
 
 export default actions
