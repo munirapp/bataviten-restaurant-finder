@@ -10,7 +10,7 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest",
-    "test:actions": "cross-env ZOMATO_API_URL=http://test.com && jest"
+    "test:actions": "cross-env ZOMATO_API_URL=http://test.com jest"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
