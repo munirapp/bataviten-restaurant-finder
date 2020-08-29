@@ -17,6 +17,6 @@ jobs:
       - name: Running Lint check
         run: npm run lint
       - name: Running Unit Test
-        run: ./node_modules/cross-env ZOMATO_API_URL=https://developers.zomato.com/api/v2.1 ZOMATO_API_KEY={{secrets.ZOMATO_API_KEY}} && npm run test
+        run: ./node_modules/.bin/cross-env ZOMATO_API_URL=https://developers.zomato.com/api/v2.1 ZOMATO_API_KEY={{secrets.ZOMATO_API_KEY}} && npm run test
       - name: Build Project
         run: npm run build
