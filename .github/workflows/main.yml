@@ -16,6 +16,7 @@ jobs:
         run: |
           mv .env-example .env 
           echo ZOMATO_API_KEY={{secrets.ZOMATO_API_KEY}} >> .env
+          cat .env
       - name: Install Dependencies
         run: npm install
       - name: Running Lint check
