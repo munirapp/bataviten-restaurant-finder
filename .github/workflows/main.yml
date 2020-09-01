@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set Up Environment files
-        run : |
-        mv .env-example .env 
-        echo ZOMATO_API_KEY={{secrets.ZOMATO_API_KEY}} >> .env
+        run: |
+          mv .env-example .env 
+          echo ZOMATO_API_KEY={{secrets.ZOMATO_API_KEY}} >> .env
       - name: Install Dependencies
         run: npm install
       - name: Running Lint check
