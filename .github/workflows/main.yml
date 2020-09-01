@@ -12,11 +12,15 @@ jobs:
         node-version: [13.x]
     steps:
       - uses: actions/checkout@v2
+      - name: Set Up Environment files
+        run : |
+        mv .env-example .env 
+        echo ZOMATO_API_KEY={{secrets.ZOMATO_API_KEY}} >> .env
       - name: Install Dependencies
         run: npm install
       - name: Running Lint check
         run: npm run lint
       - name: Running Unit Test
-        run: ./node_modules/.bin/cross-env ZOMATO_API_URL=https://developers.zomato.com/api/v2.1 ZOMATO_API_KEY={{secrets.ZOMATO_API_KEY}} && npm run test
+        run: npm run test
       - name: Build Project
         run: npm run build
