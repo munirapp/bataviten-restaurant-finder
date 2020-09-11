@@ -16,6 +16,7 @@ const actions = {
   },
 
   async runGetDetailRestaurant({ commit }, payload) {
+    console.log(payload)
     const { data } = await apiFactory.getDetailRestaurant(payload.id)
     commit('set', [payload.key, data])
   },

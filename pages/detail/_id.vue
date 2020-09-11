@@ -17,11 +17,11 @@ export default {
       return this.$store.state.dataDetailRestaurant
     },
   },
-  created() {
-    this.$store.dispatch('runGetDetailRestaurant', {
-      key: 'dataDetailRestaurant',
-      id: this.$route.params.id,
-    })
-  },
+  // created() {
+  //   this.$store.dispatch('runGetDetailRestaurant', {
+  //     key: 'dataDetailRestaurant',
+  //     id: this.$route.params.id,
+  //   })
+  // },
 }
 </script>

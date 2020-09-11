@@ -57,10 +57,9 @@ describe('Test vue components in pages detail/_id.vue', () => {
 
 describe('Test store process in pages detail/_id.vue', () => {
   test('data computed detailRestaurant have same object keys with data mock detail restaurant', async () => {
-    // Run router push with example parameter restaurant id
-    wrapper.vm.$router.push('/detail/7405446')
-    // Get parameter id
-    const { id } = wrapper.vm.$route.params
+    // Initate variable params
+    const id = 7405446
+
     // Run store actions
     await wrapper.vm.$store.dispatch('runGetDetailRestaurant', {
       key: 'dataDetailRestaurant',
